@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
+import FruitCounters from './component/FruitCounters';
 import './App.css';
 
-function App() {
-  return (
-    <>
-      <h1>Fruitmand bezorgservice</h1>
-    </>
-  );
+class App extends Component {
+    render() {
+        return (
+            <div>
+                <FruitCounters />
+            </div>
+        );
+    }
 }
 
 export default App;
