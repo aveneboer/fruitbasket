@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Button from './Button';
 import '../App.css';
 
 class FruitCounter extends Component {
     render() {
-        const { fruit, count, increaseCount, decreaseCount } = this.props;
+        const {fruit, count, increaseCount, decreaseCount} = this.props;
 
         const getCounterClassName = () => {
             // Conditionele klasse toewijzing aan de fruit-counter

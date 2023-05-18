@@ -1,14 +1,64 @@
+/*////////////////////////
+Table of Contents
+1. Global Styles
+2. Areas
+2.1 Navigation
+2.2 Header
+2.3 Products
+2.4 Form
+3. Media Queries
+////////////////////////*/
 
+/* ------------------------------- 1. Global Styles -------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f2f2f2;
+
+}
+
+
+/* ------------------------------- 2. Areas ---------------------------------------- */
+
+/* --------------- 2.1 Navigation ------------------------- */
+
+/* --------------- 2.2 Header ------------------- */
+img {
+    width: 100%;
+    height: auto;
+
+}
+
+/* --------------- 2.3 Products ------------------- */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1em;
+    background-color: darkgoldenrod;
+    padding: 20px;
+    color: white;
+    margin: 50px;
+    border-radius: 25px;
 }
 
-
 .selected {
-    border: 2px solid indianred;
+    padding: 10px;
+    border: 2px solid silver;
 }
 
 .fruit-name {
@@ -28,20 +78,43 @@
     transition: all 0.2s ease-in-out;
 }
 
-/* Algemene styling */
-body {
+.fruit-counter {
     display: flex;
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-/* Styling voor het bestelformulier */
+.fruit-name {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+button:hover {
+    background-color: seagreen;
+    color: #fff;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px seagreen;
+}
+
+.counter {
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/*-------------------------------2.4 Form------------------------ */
 form {
     background-color: #fff;
-    padding: 20px;
+    padding: 50px;
+    margin: 50px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
 }
 
 .form-group {
@@ -53,19 +126,26 @@ label {
     margin-bottom: 5px;
 }
 
-input,
-select,
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
 textarea {
     width: 50%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
     font-size: 16px;
-    height: 20px;
 }
 
 button[type="submit"] {
-    background-color: #4CAF50;
+    background-color: seagreen;
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -79,34 +159,14 @@ button[type="submit"]:disabled {
     cursor: not-allowed;
 }
 
-/* Styling voor de fruitcounters */
-.fruit-counter {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
 
-.fruit-name {
-    font-weight: bold;
-    margin-right: 10px;
-}
+/* ------------------------------- 3. Media Queries -------------------------------- */
 
-
-
-button:hover {
-    background-color: #4CAF50;
-    color: #fff;
-}
-
-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px #4CAF50;
-}
-
-.counter {
-    margin: 0 10px;
-    font-size: 16px;
-    font-weight: bold;
+@media screen and (max-width: 1200px) {
+    main {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 

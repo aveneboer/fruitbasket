@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import FruitCounters from './component/FruitCounters';
 import './App.css';
 import Form from "./component/Form";
+import logo from './assets/screenshot-logo.png';
+
 
 class App extends Component {
     handleFormSubmit = (formData) => {
@@ -16,11 +18,17 @@ class App extends Component {
             kiwis: this.kiwis
         });
     };
+
     render() {
         return (
             <body>
-                <FruitCounters />
-                <Form onSubmit={this.handleFormSubmit} />
+            <header>
+                <img src={logo} alt="Logo"/>
+            </header>
+            <main>
+                <FruitCounters/>
+                <Form onSubmit={this.handleFormSubmit}/>
+            </main>
             </body>
         );
     }

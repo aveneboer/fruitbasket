@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import FruitCounter from './FruitCounter';
 import Button from './Button';
 import '../App.css';
@@ -36,7 +36,7 @@ class FruitCounters extends Component {
     };
 
     render() {
-        const { bananas, strawberries, apples, kiwis } = this.state;
+        const {bananas, strawberries, apples, kiwis} = this.state;
 
         return (
             <div className="container">
