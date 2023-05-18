@@ -1,0 +1,172 @@
+/*////////////////////////
+Table of Contents
+1. Global Styles
+2. Areas
+2.1 Navigation
+2.2 Header
+2.3 Products
+2.4 Form
+3. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f2f2f2;
+
+}
+
+
+/* ------------------------------- 2. Areas ---------------------------------------- */
+
+/* --------------- 2.1 Navigation ------------------------- */
+
+/* --------------- 2.2 Header ------------------- */
+img {
+    width: 100%;
+    height: auto;
+
+}
+
+/* --------------- 2.3 Products ------------------- */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    background-color: darkgoldenrod;
+    padding: 20px;
+    color: white;
+    margin: 50px;
+    border-radius: 25px;
+}
+
+.selected {
+    padding: 10px;
+    border: 2px solid silver;
+}
+
+.fruit-name {
+    margin-right: 10px;
+}
+
+.button {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #fff;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.fruit-counter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.fruit-name {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+button:hover {
+    background-color: seagreen;
+    color: #fff;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px seagreen;
+}
+
+.counter {
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/*-------------------------------2.4 Form------------------------ */
+form {
+    background-color: #fff;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+textarea {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: seagreen;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* ------------------------------- 3. Media Queries -------------------------------- */
+
+@media screen and (max-width: 1200px) {
+    main {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
